@@ -21,11 +21,14 @@ import {
   LocationOn,
   Work,
   School,
+  Upgrade,
 } from '@mui/icons-material';
 import { useAuth } from '../context/AuthContext';
+import { useNavigate } from 'react-router-dom';
 
 const ProfilePage: React.FC = () => {
   const { user } = useAuth();
+  const navigate = useNavigate();
 
   if (!user) {
     return (
@@ -102,10 +105,22 @@ const ProfilePage: React.FC = () => {
                 fullWidth
                 variant="contained"
                 startIcon={<Edit />}
-                sx={{ mt: 2 }}
+                sx={{ mt: 2, mb: 1 }}
               >
                 Edit Profile
               </Button>
+              
+              {user.membershipType === 'Free' && (
+                <Button
+                  fullWidth
+                  variant="outlined"
+                  color="primary"
+                  startIcon={<Upgrade />}
+                  onClick={() => navigate('/payment')}
+                >
+                  Upgrade to Premium
+                </Button>
+              )}
             </CardContent>
           </Card>
         </Grid>

@@ -60,6 +60,7 @@ const Navbar: React.FC = () => {
     { label: 'My Profile', action: () => navigate('/profile'), icon: <Person /> },
     { label: 'Messages', action: () => navigate('/messages'), icon: <Message /> },
     { label: 'Search', action: () => navigate('/search'), icon: <Search /> },
+    { label: 'Upgrade Plan', action: () => navigate('/payment'), icon: <Star /> },
     { label: 'Logout', action: handleLogout, icon: <Logout /> },
   ];
 

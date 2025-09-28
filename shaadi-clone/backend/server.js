@@ -21,6 +21,7 @@ app.use('/api/interests', require('./routes/interests'));
 app.use('/api/messages', require('./routes/messages'));
 app.use('/api/search', require('./routes/search'));
 app.use('/api/subscriptions', require('./routes/subscriptions'));
+app.use('/api/payments', require('./routes/payments'));
 app.use('/api/upload', require('./routes/upload'));
 
 // Default route

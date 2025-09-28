@@ -8,6 +8,8 @@ import RegisterPage from './pages/RegisterPage';
 import ProfilePage from './pages/ProfilePage';
 import SearchPage from './pages/SearchPage';
 import MessagesPage from './pages/MessagesPage';
+import PaymentPage from './pages/PaymentPage';
+import PaymentStatusPage from './pages/PaymentStatusPage';
 import PrivateRoute from './components/PrivateRoute';
 
 function App() {
@@ -39,6 +41,22 @@ function App() {
           element={
             <PrivateRoute>
               <MessagesPage />
+            </PrivateRoute>
+          } 
+        />
+        <Route 
+          path="/payment" 
+          element={
+            <PrivateRoute>
+              <PaymentPage />
+            </PrivateRoute>
+          } 
+        />
+        <Route 
+          path="/payment/status" 
+          element={
+            <PrivateRoute>
+              <PaymentStatusPage />
             </PrivateRoute>
           } 
         />
